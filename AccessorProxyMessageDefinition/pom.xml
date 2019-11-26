@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.ctl.ch.drivr.build</groupId>
+		<artifactId>DrivrBuild</artifactId>
+		<version>19.12.00</version>
+		<relativePath>../DrivrBuild/pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ctl.ch.drivr.accessorproxymessagedefinition</groupId>
+	<artifactId>AccessorProxyMessageDefinition</artifactId>
+
+	<name>AccessorProxyMessageDefinition</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaDirectory>${basedir}/src/main/resources/xsd</schemaDirectory>
+					<packageName>${project.groupId}</packageName>
+					<outputDirectory>${basedir}\src\main\java</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
