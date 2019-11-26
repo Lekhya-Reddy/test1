@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.ctl.ch.drivr.build</groupId>
+		<artifactId>DrivrBuild</artifactId>
+		<version>19.12.00</version>
+		<relativePath>../DrivrBuild/pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ctl.ch.drivr</groupId>
+	<artifactId>AccessorProxyClientDataSource</artifactId>
+	<packaging>jar</packaging>
+
+	<name>DrivrProxyDataSource</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<skipTests>true</skipTests>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ctl.ch.drivr</groupId>
+			<artifactId>DataAccess</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ctl.ch.drivr.accessorproxymessagedefinition</groupId>
+			<artifactId>AccessorProxyMessageDefinition</artifactId>
+			<version>${project.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.ctl.ch.drivr.utilities</groupId>
+			<artifactId>DrivrUtilities</artifactId>
+			<version>${project.version}</version>
+		</dependency>				
+
+	</dependencies>
+</project>
